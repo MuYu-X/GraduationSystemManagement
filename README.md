@@ -31,9 +31,9 @@ I think of extra tips and then add in
 
 | 字段名称   | 字段描述   | 字段类型   | 允许为空   | Key    |
 |:----------:||:----------:||:----------:||:----------:||:----------:|
-|UserID|	用户ID|	Int	|不允许|	主键|
-|UserName|	用户昵称|	varchar(50)|	不允许|	否|
-|UserPwd|	用户密码|	varchar(50)|	不允许	|否|
+| UserID |	用户ID |	Int	| 不允许 |	主键 |
+| UserName |	用户昵称 |	varchar(50) |	不允许 |	否 |
+| UserPwd |	用户密码 |	varchar(50) |	不允许	| 否 |
 
 
 

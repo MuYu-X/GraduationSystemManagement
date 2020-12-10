@@ -26,14 +26,19 @@ I think of extra tips and then add in
 额外的tips想到了再加
 
 # Database Design
-![image](https://github.com/MuYu-X/GraduationSystemManagement/blob/main/E-R%20Diagram.png)
-![image](https://github.com/MuYu-X/GraduationSystemManagement/blob/main/relation%20table.png)
 
+LoginDB
 | 字段名称   | 字段描述   | 字段类型   | 允许为空   | Key    |
 |:----------:|:----------:|:----------:|:----------:|:----------:|
-| UserID |	用户ID |	Int	| 不允许 |	主键 |
-| UserName |	用户昵称 |	varchar(50) |	不允许 |	否 |
-| UserPwd |	用户密码 |	varchar(50) |	不允许	| 否 |
+| UserID |	User ID |	Int	| 不允许 |	主键 |
+| UserName | User Name |	varchar(50) |	不允许 |	否 |
+| UserPwd |	User Password |	varchar(50) |	不允许	| 否 |
+
+FacultyDB
+|字段名称|	字段描述|字段类型|	允许为空|	Key|
+|:----------:|:----------:|:----------:|:----------:|:----------:|
+|FacultyID	|Faculty ID	|Int|	不允许|	主键|
+|FacultyName	|Faculty Name	|varchar(50)|	允许	|外键|
 
 
 
@@ -46,8 +51,8 @@ I think of extra tips and then add in
 
 
 
-
-
+![image](https://github.com/MuYu-X/GraduationSystemManagement/blob/main/E-R%20Diagram.png)
+![image](https://github.com/MuYu-X/GraduationSystemManagement/blob/main/relation%20table.png)
 
 [back to the top(回到顶部)](#readme)
 

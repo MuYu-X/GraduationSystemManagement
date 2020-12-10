@@ -30,88 +30,86 @@ I think of extra tips and then add in
 LoginDB 用户信息表
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-| UserID |	User ID(用户ID) |	Int	| not(不允许) |	key |
-| UserName | User Name(用户名称) |	varchar(50) |	not(不允许)t |	 
+| UserID |	User ID(用户ID) |	Int	| not(不允许) |	primary key(主键) |
+| UserName | User Name(用户名称) |	varchar(50) |	not(不允许) |	 
 | UserPwd |	User Password(用户密码) |	varchar(50) |	not(不允许)	|  
 
 FacultyDB 教学单位信息表
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|FacultyID	|Faculty ID	|Int|	not(不允许)|	主键|
-|FacultyName	|Faculty Name	|varchar(50)|	empty(允许)	|外键|
+|FacultyID	|Faculty ID(教学单位ID)	|Int|	not(不允许)|	primary key(主键)|
+|FacultyName	|Faculty Name(教学单位名称)	|varchar(50)|	empty(允许)	|foreign key(外键)|
 
 ProfessionDB 专业名称信息表
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|ProfessionID	|专业ID	|Int|	not(不允许)	|主键|
-|ProfessionName	|专业名称	|varchar(50)|	empty(允许)|	外键|
-|FacultyName|	教学单位名称|	varchar(50)	|empty(允许)|	外键|
+|ProfessionID	| Profession ID(专业ID)	|Int|	not(不允许)	|primary key(主键)|
+|ProfessionName	| Profession Name(专业名称)	|varchar(50)|	empty(允许)|	foreign key(外键)|
+|FacultyName|	Faculty Name(教学单位名称) | 	varchar(50)	|empty(允许)|	foreign key(外键)|
 
 TrainPlanDB 专业培养方案信息表信息表
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|TrainingObjectID	|培养目标ID|	Int|	not(不允许)|	主键|
-|Faculty|	教学单位名称	|varchar(50)|	empty(允许)	|外键|
-|Profession|	专业名称	|varchar(50)	|empty(允许)|	外键|
-|TrainingObject|	培养计划|	Text	empty(允许)	|
-|GraduationReq1|  毕业要求1|	Text|	empty(允许)	|
-|GraduationReq2|	毕业要求2|	Text|	empty(允许)	|
-|GraduationReq3|	毕业要求3|	Text|	empty(允许)	|
-|GraduationReq4|	毕业要求4|	Text|	empty(允许)	|
-|GraduationReq5|	毕业要求5|	Text|	empty(允许)	|
-|GraduationReq6|	毕业要求6|	Text|	empty(允许)	|
-|GraduationReq7|	毕业要求7|	Text|	empty(允许)	|
-|GraduationReq8|	毕业要求8|	Text|	empty(允许)	|
-|GraduationReq9|	毕业要求9|	Text|	empty(允许)	|
-|GraduationReq10|	毕业要求10|	Text|	empty(允许)  |	
-|GraduationReq11|	毕业要求11|	Text|	empty(允许)	|
-|GraduationReq12|	毕业要求12|	Text|	empty(允许)	|
+|TrainingObjectID	|培养目标ID|	Int|	not(不允许)|	primary key(主键)|
+|Faculty|	Faculty Name(教学单位名称)	|varchar(50)|	empty(允许)	|foreign key(外键)|
+|Profession|	Profession Name(专业名称)	|varchar(50)	|empty(允许)|	foreign key(外键)|
+|TrainingObject|	Training Plan(培养计划)|	Text|	empty(允许)	|
+|GraduationReq1|  Graduation Requirement1(毕业要求1)|	Text|	empty(允许)	|
+|GraduationReq2|	Graduation Requirement2(毕业要求2)|	Text|	empty(允许)	|
+|GraduationReq3|	Graduation Requirement3(毕业要求3)|	Text|	empty(允许)	|
+|GraduationReq4|	Graduation Requirement4(毕业要求4)|	Text|	empty(允许)	|
+|GraduationReq5|	Graduation Requirement5(毕业要求5)|	Text|	empty(允许)	|
+|GraduationReq6|	Graduation Requirement6(毕业要求6)|	Text|	empty(允许)	|
+|GraduationReq7|	Graduation Requirement7(毕业要求7)|	Text|	empty(允许)	|
+|GraduationReq8|	Graduation Requirement8(毕业要求8)|	Text|	empty(允许)	|
+|GraduationReq9|	Graduation Requirement9(毕业要求9)|	Text|	empty(允许)	|
+|GraduationReq10|	Graduation Requirement10(毕业要求10)|	Text|	empty(允许)  |	
+|GraduationReq11|	Graduation Requirement11(毕业要求11)|	Text|	empty(允许)	|
+|GraduationReq12|	Graduation Requirement12(毕业要求12)|	Text|	empty(允许)	|
 
 CourseMatrixDB 支撑课程评价信息表
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|CourseID	|课程ID|	Int|	not(不允许)	|主键|
-|ProfessionName|	专业名称|	varchar(50)|	empty(允许)|	外键|
-|FacultyName|	教学单位| varchar(50)|	empty(允许)|	外键|
-|CourseName|	课程名称|	varchar(30)|	empty(允许)|	外键|
-|GraReq1|	毕业要求1|	varchar(1)|	empty(允许)	|
-|GraReq2|	毕业要求2|	varchar(1)|	empty(允许)	|
-|GraReq3|	毕业要求3|	varchar(1)|	empty(允许)	|
-|GraReq4|	毕业要求4|	varchar(1)|	empty(允许)	|
-|GraReq5|	毕业要求5|	varchar(1)|	empty(允许)	|
-|GraReq6|	毕业要求6|	varchar(1)|	empty(允许)	|
-|GraReq7|	毕业要求7|	varchar(1)|	empty(允许)	|
-|GraReq8|	毕业要求8|	varchar(1)|	empty(允许)	|
-|GraReq9|	毕业要求9|	varchar(1)|	empty(允许)	|
-|GraReq10|	毕业要求10|	varchar(1)|	empty(允许)	|
-|GraReq11|	毕业要求11|	varchar(1)|	empty(允许)	|
-|GraReq12|	毕业要求12|	varchar(1)|	empty(允许)	|
+|CourseID	|Course ID(课程ID)|	Int|	not(不允许)	|primary key(主键)|
+|ProfessionName|	Profession Name(专业名称)|	varchar(50)|	empty(允许)|	foreign key(外键)|
+|FacultyName|	Faculty Name(教学单位名称)| varchar(50)|	empty(允许)|	foreign key(外键)|
+|CourseName|	Course Name(课程名称)|	varchar(30)|	empty(允许)|	foreign key(外键)|
+|GraReq1|	Graduation Requirement1 level(毕业要求1)|	varchar(1)|	empty(允许)	|
+|GraReq2| Graduation Requirement2 level(毕业要求2)|	varchar(1)|	empty(允许)	|
+|GraReq3|	Graduation Requirement3 level(毕业要求3)|	varchar(1)|	empty(允许)	|
+|GraReq4|	Graduation Requirement4 level(毕业要求4)|	varchar(1)|	empty(允许)	|
+|GraReq5|	Graduation Requirement5 level(毕业要求5)|	varchar(1)|	empty(允许)	|
+|GraReq6|	Graduation Requirement6 level(毕业要求6)|	varchar(1)|	empty(允许)	|
+|GraReq7|	Graduation Requirement7 level(毕业要求7)|	varchar(1)|	empty(允许)	|
+|GraReq8| Graduation Requirement8 level(毕业要求8)|	varchar(1)|	empty(允许)	|
+|GraReq9|	Graduation Requirement9 level(毕业要求9)|	varchar(1)|	empty(允许)	|
+|GraReq10|	Graduation Requirement10 level(毕业要求10)|	varchar(1)|	empty(允许)	|
+|GraReq11|	Graduation Requirement11 level(毕业要求11)|	varchar(1)|	empty(允许)	|
+|GraReq12|	Graduation Requirement12 level(毕业要求12)|	varchar(1)|	empty(允许)	|
 
 GraReq1DB 毕业要求指标点
 | filed name(字段名称)   | filed description(字段描述)   | filed type(字段类型)   | Empty or not(允许为空)   | Key    |
 |:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|
-|FacultyName|	教学单位|	varchar(50)|	not(不允许)|	外键|
-|ProfessionName| 	专业名称|	varchar(50)|	not(不允许)|	外键|
-|GraPoint|	毕业指标点	|Varchar(800)|	not(不允许)|	主键|
-|SupportCourse1|	支撑课程1|	varchar(50)|	empty(允许)	|
-|SupportWeight1|	支撑权重1|	varchar(10)|	empty(允许)	|
-|SupportCourse2|	支撑课程2|	varchar(50)|	empty(允许)	|
-|SupportWeight2|	支撑权重2|	varchar(10)|	empty(允许)	|
-|SupportCourse3|	支撑课程3|	varchar(50)|	empty(允许)	|
-|SupportWeight3|	支撑权重3|	varchar(10)|	empty(允许)	|
-|SupportCourse4|	支撑课程4|	varchar(50)|	empty(允许)	|
-|SupportWeight4|	支撑权重4|	varchar(10)|	empty(允许)	|
-|SupportCourse5|	支撑课程5|	varchar(50)|	empty(允许)	|
-|SupportWeight5|	支撑权重5|	varchar(10)|	empty(允许)	|
-|SupportCourse6|	支撑课程6|	varchar(50)|	empty(允许)	|
-|SupportWeight6|	支撑权重6|	varchar(10)|	empty(允许)	|
-|SupportCourse7|	支撑课程7|	varchar(50)|	empty(允许)	|
-|SupportWeight7|	支撑权重7|	varchar(10)|  empty(允许)	|
-|SupportCourse8|	支撑课程8|	varchar(50)|  empty(允许)	|
-|SupportWeight8|	支撑权重8|	varchar(10)|	empty(允许)	|
-|RelateCourse|	相关课程|	varchar(200)|	empty(允许)	|
-
-
+|FacultyName|	Faculty Name(教学单位名称)|	varchar(50)|	not(不允许)|	foreign key(外键)|
+|ProfessionName| 	Profession Name(专业名称)|	varchar(50)|	not(不允许)|	foreign key(外键)|
+|GraPoint|	Graduation point(毕业指标点)	|Varchar(800)|	not(不允许)|	primary key(主键)|
+|SupportCourse1|	Support Course1(支撑课程1)|	varchar(50)|	empty(允许)	|
+|SupportWeight1|	Support Weight1(支撑权重1)|	varchar(10)|	empty(允许)	|
+|SupportCourse2|	Support Course2(支撑课程2)|	varchar(50)|	empty(允许)	|
+|SupportWeight2|	Support Weight2(支撑权重2)|	varchar(10)|	empty(允许)	|
+|SupportCourse3|	Support Course3(支撑课程3)|	varchar(50)|	empty(允许)	|
+|SupportWeight3|	Support Weight3(支撑权重3)|	varchar(10)|	empty(允许)	|
+|SupportCourse4|	Support Course4(支撑课程4)|	varchar(50)|	empty(允许)	|
+|SupportWeight4|	Support Weight4(支撑权重4)|	varchar(10)|	empty(允许)	|
+|SupportCourse5|	Support Course5(支撑课程5)|	varchar(50)|	empty(允许)	|
+|SupportWeight5|	Support Weight5(支撑权重5)|	varchar(10)|	empty(允许)	|
+|SupportCourse6|	Support Course6(支撑课程6)|	varchar(50)|	empty(允许)	|
+|SupportWeight6|	Support Weight6(支撑权重6)|	varchar(10)|	empty(允许)	|
+|SupportCourse7|	Support Course7(支撑课程7)|	varchar(50)|	empty(允许)	|
+|SupportWeight7|	Support Weight7(支撑权重7)|	varchar(10)|  empty(允许)	|
+|SupportCourse8|	Support Course8(支撑课程8)|	varchar(50)|  empty(允许)	|
+|SupportWeight8|	Support Weight8(支撑权重8)|	varchar(10)|	empty(允许)	|
+|RelateCourse|	Relate Course(相关课程)|	varchar(200)|	empty(允许)	|
 
 
 

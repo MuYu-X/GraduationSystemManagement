@@ -117,6 +117,7 @@ I think of extra tips and then add in
 of course the GraReq1DB SupportCourse and RelateCourse need to compared with CourseMatrixDB CourseName
 if there is no CourseName named "math" in CourseMatrixDB , the GraReq1DB should not have it yet.
 but I didn't write it , maybe someday i will write the check function and updata the source code.
+
 GraReq1DB里面的支撑课程和相关课程应该在CourseMatrixDB的CourseName与之对应，虽然可以是一对多的关系
 比如CourseName没有“math”，那么GraReq1DB里面也不应该出现“math”
 但实际上我并没有在源代码中做这一检查，可能以后会写一个check function去检查这个。
